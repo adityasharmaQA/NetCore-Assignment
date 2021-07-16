@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2021-07-16T15:36:02 IST" name="Default suite" finished-at="2021-07-16T15:39:19 IST" duration-ms="197503">
+    <groups>
+    </groups>
+    <test started-at="2021-07-16T15:36:02 IST" name="Default test" finished-at="2021-07-16T15:39:19 IST" duration-ms="197503">
+      <class name="makeMyTripDemo.makemytrip.testScenario1">
+        <test-method is-config="true" signature="init()[pri:0, instance:makeMyTripDemo.makemytrip.testScenario1@479d31f3]" started-at="2021-07-16T15:36:02 IST" name="init" finished-at="2021-07-16T15:36:39 IST" duration-ms="36640" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method signature="flightBooking()[pri:1, instance:makeMyTripDemo.makemytrip.testScenario1@479d31f3]" started-at="2021-07-16T15:36:39 IST" name="flightBooking" finished-at="2021-07-16T15:38:37 IST" duration-ms="118826" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- flightBooking -->
+        <test-method signature="validation()[pri:2, instance:makeMyTripDemo.makemytrip.testScenario1@479d31f3]" started-at="2021-07-16T15:38:38 IST" name="validation" finished-at="2021-07-16T15:38:38 IST" duration-ms="222" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validation -->
+        <test-method signature="readWriteFlightData()[pri:3, instance:makeMyTripDemo.makemytrip.testScenario1@479d31f3]" started-at="2021-07-16T15:38:38 IST" name="readWriteFlightData" finished-at="2021-07-16T15:39:19 IST" duration-ms="41182" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- readWriteFlightData -->
+      </class> <!-- makeMyTripDemo.makemytrip.testScenario1 -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
