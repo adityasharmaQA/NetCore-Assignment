@@ -17,19 +17,10 @@ public class flightListPage {
 		this.driver=driver;
 	}
 	
-	@BeforeClass
-	public void openBrowser()
-	{
-		System.setProperty("webdriver.chrome.driver", "E:\\ChromeDriver\\chromedriver.exe");
-		driver = new ChromeDriver();
-		driver.get("https://www.makemytrip.com/flight/search?itinerary=BOM-DEL-16/07/2021_DEL-BOM-20/07/2021&tripType=R&paxType=A-2_C-1_I-1&intl=false&cabinClass=B&ccde=IN&lang=eng");
-		driver.manage().window().maximize();
-	}
-
 	By originReadValue = By.xpath("//input[@id='fromCity']");
 	By destinationReadValue = By.xpath("//input[@id='toCity']");
 	
-	@Test(priority=1)
+	//This method will validate that previous page details match with flight details page or not
 	public void validateDetials()
 	{
 		HomePage h = new HomePage(driver);

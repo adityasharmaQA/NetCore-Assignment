@@ -18,6 +18,7 @@ public class HomePage {
 		this.driver = driver;
 	}
 	
+	//This method will open browse 
 	public void openBrowser()
 	{
 		System.setProperty("webdriver.chrome.driver", "E:\\ChromeDriver\\chromedriver.exe");
@@ -30,14 +31,18 @@ public class HomePage {
 	By destinationLabel = By.xpath("//span[text()='To']");
 	By destinationTextBox = By.xpath("//input[@placeholder='To' and @type='text']");
 	By destinationList = By.xpath("//p[contains(text(),'"+destinationCity+"')]");
+	By random = By.xpath("//div[@class='minContainer']");
 	
 	
+	//This method will select departure and return date from field
 	public void selectOriginAndDestination() throws InterruptedException
 	{
 		//driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
 		driver.get("https://www.makemytrip.com/");
 		driver.manage().window().maximize();
 		Thread.sleep(5000);
+		driver.findElement(random).click();
+		Thread.sleep(3000);
 		driver.findElement(roundTrip).click();
 		Thread.sleep(5000);
 		
@@ -58,8 +63,10 @@ public class HomePage {
 	
 	By departureDateLabel=By.xpath("//span[text()='DEPARTURE']");
 	
+	//This method will select date from date field
 	public void selectDate() throws InterruptedException
 	{
+		//Date operation for calculate origin date and return date
 		Date date = new Date();
 		SimpleDateFormat formatter = new SimpleDateFormat("dd");
 		String todayDate= formatter.format(date);
@@ -67,7 +74,7 @@ public class HomePage {
 		
 		int DepartureDate= Integer.parseInt(todayDate);
 		int bookingDate=DepartureDate+1;
-		int returnDate = DepartureDate+5;
+		int returnDate = DepartureDate+3;
 		int preDate = DepartureDate-2;
 
 		formatter = new SimpleDateFormat("MMM");
@@ -100,6 +107,7 @@ public class HomePage {
 		driver.findElement(By.xpath("//div[contains(@aria-label,'"+currentMonth+"')]//p[text()='"+returnDate+"']")).click();
 	}
 
+	//This method will add passengers in passenger field
 	public void addPassenger() throws InterruptedException
 	{
 		//Select Adult Passenger
@@ -123,6 +131,7 @@ public class HomePage {
 		
 	}
 	
+	//This method will submit the Flight form
 	public void submitFlightDetials() throws InterruptedException
 	{
 		//Click on Search button

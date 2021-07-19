@@ -3,12 +3,16 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="makeMyTripDemo.makemytrip.flightDetails">
+      <class name="makeMyTripDemo.makemytrip.testScenario1">
         <methods>
-          <include name="openBrowser"/>
-          <include name="storeData"/>
+          <include name="closeBrowser"/>
+          <include name="init"/>
+          <include name="slidePriceAndStoreData"/>
+          <include name="generateReport"/>
+          <include name="flushReport"/>
+          <include name="flightBooking"/>
         </methods>
-      </class> <!-- makeMyTripDemo.makemytrip.flightDetails -->
+      </class> <!-- makeMyTripDemo.makemytrip.testScenario1 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
